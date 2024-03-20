@@ -1,3 +1,4 @@
+import loginPage from "D:/CODE/ORANGE-HRM/cypress/models/pages/HRMLoginPage.js";
 /// <reference types="cypress" />
 describe("Login Function", () => {
   let testData;
@@ -7,7 +8,7 @@ describe("Login Function", () => {
     });
   });
   it("Login with correct Credentials", () => {
-    cy.login(
+    loginPage.login(
       testData.correctCredentials.username,
       testData.correctCredentials.password
     );
@@ -15,7 +16,7 @@ describe("Login Function", () => {
   });
 
   it("Login with incorrect Credentials", () => {
-    cy.login(
+    loginPage.login(
       testData.incorrectCredentials.username,
       testData.incorrectCredentials.password
     );

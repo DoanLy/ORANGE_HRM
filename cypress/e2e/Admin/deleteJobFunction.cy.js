@@ -1,30 +1,24 @@
+import loginPage from "../../models/pages/HRMLoginPage.js";
+import AdminPage from "../../models/pages/AdminPage.js";
+import ResultData from "../../models/components/ResultData.js";
 /// <reference types="cypress" />
 
 describe("Delete Job Function", () => {
-  const jobData = {
-    JobTitle: "Account Assistant",
-    Description: "Nothing",
-  };
+  let jobData;
   beforeEach(() => {
-    cy.login();
+    cy.fixture("addJobDataTest").then((data) => {
+      jobData = data;
+    });
+    loginPage.login();
     // Admin page gets opened
-    cy.get(".oxd-main-menu li").contains("Admin").click();
-    cy.url().should("include", "admin");
+    AdminPage.visitAdminPage();
   });
 
-  it("Verify add job successfully", () => {
+  it("Verify delete job successfully", () => {
     //Navigate Job page
-    cy.get(".oxd-topbar-body-nav ul").contains("Job").click();
-    cy.get(".oxd-dropdown-menu li").contains("Job Titles").click();
-    cy.get(".oxd-table-body")
-      .find(".oxd-table-card")
-      .each((item, index) => {
-        const t = item.text();
-        if (t.includes(jobData.JobTitle)) {
-          cy.get(".oxd-icon.bi-trash").eq(index).click();
-        }
-      });
-    cy.get(".oxd-button--label-danger").click();
-    cy.contains("Successfully Deleted").should("be.visible");
+    AdminPage.visitJobPage();
+    AdminPage.visitJobTitlePage();
+    AdminPage.deleteJobTitle(jobData.DEV.JobTitle);
+    cy.contains(ResultData.DeleteSuccess()).should("be.visible");
   });
 });

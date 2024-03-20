@@ -25,10 +25,10 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 import "cypress-file-upload";
-Cypress.Commands.add("login", (username = "Admin", password = "admin123") => {
-  cy.visit("/");
-  cy.wait(3000);
-  cy.get('input[name="username"]').type(username);
-  cy.get('input[type="password"]').type(password);
-  cy.get('button[type="submit"]').click();
-});
+// Cypress.Commands.add("login", (username = "Admin", password = "admin123") => {
+//   cy.visit("/");
+//   cy.wait(3000);
+//   cy.get('input[name="username"]').type(username);
+//   cy.get('input[type="password"]').type(password);
+//   cy.get('button[type="submit"]').click();
+// });
