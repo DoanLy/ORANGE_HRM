@@ -1,25 +1,18 @@
-import LeftMenuComponent from "../../models/components/LeftMenuComponent.js";
+import HomePage from "./HomePage.js";
 import iconComponent from "../components/iconComponent.js";
 import buttonComponent from "../components/buttonComponent.js";
 import tableComponent from "../components/tableComponent.js";
-const TOPBAR_MENU_ITEM_SEL = ".oxd-topbar-body-nav ul";
+import topbarComponent from "../components/topbarComponent.js";
+
 const DROPDOWN_MENU_ITEM_SEL = ".oxd-dropdown-menu li";
 
 class AdminPage {
-  visitAdminPage() {
-    LeftMenuComponent.MenuItemElem().contains("Admin").click();
-    cy.url().should("include", "admin");
-  }
-  TopbarMenuItemElem() {
-    return cy.get(TOPBAR_MENU_ITEM_SEL);
-  }
-
   DropdownMenuItemElem() {
     return cy.get(DROPDOWN_MENU_ITEM_SEL);
   }
 
   visitJobPage() {
-    this.TopbarMenuItemElem().contains("Job").click();
+    topbarComponent.selectItemFromTopBar("Job");
   }
 
   visitJobTitlePage() {

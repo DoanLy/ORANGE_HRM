@@ -1,4 +1,4 @@
-import HomePageComponent from "../components/HomePageComponent.js";
+import HomePage from "./HomePage.js";
 const USERNAME_SEL = 'input[name="username"]';
 const PASSWORD_SEL = 'input[type="password"]';
 const LOGIN_BTN_SEL = 'button[type="submit"]';
@@ -17,7 +17,7 @@ class loginPage {
   }
 
   login(username = "Admin", password = "admin123") {
-    HomePageComponent.visitHomePage();
+    HomePage.visitHomePage();
     this.usernameInput().type(username);
     this.passwordInput().type(password);
     this.loginBtn().click();

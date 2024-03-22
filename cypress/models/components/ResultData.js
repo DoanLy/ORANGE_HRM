@@ -7,7 +7,9 @@ class ResultData {
     return "Successfully Deleted";
   }
 
-  UpdateSuccess() {}
+  UpdateSuccess() {
+    return "Successfully Updated";
+  }
 
   MessageExist() {
     return "Already exists";
