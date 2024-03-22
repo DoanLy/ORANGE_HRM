@@ -10,5 +10,9 @@
   "PM": {
     "JobTitle": "PM",
     "Description": "Nothing"
+  },
+  "QALead": {
+    "JobTitle": "QA Lead",
+    "Description": "Nothing"
   }
 }

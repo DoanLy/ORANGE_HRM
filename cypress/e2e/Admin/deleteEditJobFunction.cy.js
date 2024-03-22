@@ -1,12 +1,12 @@
+/// <reference types="cypress" />
 import loginPage from "../../models/pages/HRMLoginPage.js";
 import AdminPage from "../../models/pages/AdminPage.js";
 import ResultData from "../../models/components/ResultData.js";
-/// <reference types="cypress" />
 
 describe("Delete Job Function", () => {
   let jobData;
   beforeEach(() => {
-    cy.fixture("addJobDataTest").then((data) => {
+    cy.fixture("JobDataTest").then((data) => {
       jobData = data;
     });
     loginPage.login();
@@ -18,7 +18,15 @@ describe("Delete Job Function", () => {
     //Navigate Job page
     AdminPage.visitJobPage();
     AdminPage.visitJobTitlePage();
-    AdminPage.deleteJobTitle(jobData.DEV.JobTitle);
+    AdminPage.deleteJobTitle(jobData.QALead.JobTitle);
     cy.contains(ResultData.DeleteSuccess()).should("be.visible");
+  });
+
+  it.skip("Verify Edit job successfully", () => {
+    //Navigate Job page
+    AdminPage.visitJobPage();
+    AdminPage.visitJobTitlePage();
+    AdminPage.editJobTitle(jobData.QALead.JobTitle);
+    cy.get("h6").should("contain", "Edit Job Title");
   });
 });

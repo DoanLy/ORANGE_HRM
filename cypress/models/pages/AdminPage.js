@@ -1,4 +1,7 @@
 import LeftMenuComponent from "../../models/components/LeftMenuComponent.js";
+import iconComponent from "../components/iconComponent.js";
+import buttonComponent from "../components/buttonComponent.js";
+import tableComponent from "../components/tableComponent.js";
 const TOPBAR_MENU_ITEM_SEL = ".oxd-topbar-body-nav ul";
 const DROPDOWN_MENU_ITEM_SEL = ".oxd-dropdown-menu li";
 
@@ -44,20 +47,23 @@ class AdminPage {
     });
 
     cy.wait(5000);
-    cy.get(".oxd-button--secondary").click();
+    buttonComponent.clickBtnSave();
+  }
+
+  rowJobTitleElem() {
+    return cy.get(".oxd-table-body").find(".oxd-table-card");
   }
 
   deleteJobTitle(JobTitle) {
     //Navigate Job page
-    cy.get(".oxd-table-body")
-      .find(".oxd-table-card")
-      .each((item, index) => {
-        const t = item.text();
-        if (t.includes(JobTitle)) {
-          cy.get(".oxd-icon.bi-trash").eq(index).click();
-        }
-      });
+    tableComponent.handleActionOnTableRow(
+      JobTitle,
+      iconComponent.iconDeleteElem
+    );
     cy.get(".oxd-button--label-danger").click();
+  }
+  editJobTitle(JobTitle) {
+    tableComponent.handleActionOnTableRow(JobTitle, iconComponent.iconEditElem);
   }
 }
 
