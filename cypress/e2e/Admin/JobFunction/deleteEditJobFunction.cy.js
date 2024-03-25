@@ -1,32 +1,33 @@
 /// <reference types="cypress" />
-import loginPage from "../../../models/pages/HRMLoginPage.js";
-import AdminPage from "../../../models/pages/AdminPage.js";
+import HRMLoginPage from "../../../models/pages/HRMLoginPage.js";
+import adminPage from "../../../models/pages/adminPage.js";
 import ResultData from "../../../models/components/ResultData.js";
+import HomePage from "../../../models/pages/HomePage.js";
 
 describe("Delete Job Function", () => {
   let jobData;
   beforeEach(() => {
-    cy.fixture("JobDataTest").then((data) => {
+    cy.fixture("JobTestData").then((data) => {
       jobData = data;
     });
-    loginPage.login();
+    HRMLoginPage.login();
     // Admin page gets opened
     HomePage.clickMenuItem("Admin", "admin");
   });
 
   it("Verify Edit job successfully", () => {
     //Navigate Job page
-    AdminPage.visitJobPage();
-    AdminPage.visitJobTitlePage();
-    AdminPage.editJobTitle(jobData.QALead.JobTitle);
+    adminPage.visitJobPage();
+    adminPage.visitJobTitlePage();
+    adminPage.editJobTitle(jobData.QALead.JobTitle);
     cy.get("h6").should("contain", "Edit Job Title");
   });
 
   it("Verify delete job successfully", () => {
     //Navigate Job page
-    AdminPage.visitJobPage();
-    AdminPage.visitJobTitlePage();
-    AdminPage.deleteJobTitle(jobData.QALead.JobTitle);
+    adminPage.visitJobPage();
+    adminPage.visitJobTitlePage();
+    adminPage.deleteJobTitle(jobData.QALead.JobTitle);
     cy.contains(ResultData.DeleteSuccess()).should("be.visible");
   });
 });

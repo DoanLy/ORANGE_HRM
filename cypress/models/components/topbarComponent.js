@@ -5,7 +5,7 @@ class topbarComponent {
     return cy.get(TOPBAR_MENU_ITEM_SEL);
   }
 
-  selectItemFromTopBar(itemMenu) {
+  clickItemFromTopBar(itemMenu) {
     this.getTopbarMenuItem().contains(itemMenu).click();
   }
 }

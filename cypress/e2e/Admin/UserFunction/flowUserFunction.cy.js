@@ -2,7 +2,8 @@
 import HRMLoginPage from "../../../models/pages/HRMLoginPage.js";
 import UserPage from "../../../models/pages/UserPage.js";
 import ResultData from "../../../models/components/ResultData.js";
-import { UserDataTest } from "../../../fixtures/UserDataTest.js";
+import { UserTestData } from "../../../fixtures/UserTestData.js";
+import HomePage from "../../../models/pages/HomePage.js";
 
 describe("User Function", () => {
   beforeEach(() => {
@@ -14,40 +15,40 @@ describe("User Function", () => {
   it("Verify add user successfully", () => {
     // Add User page gets opened
     UserPage.addUser(
-      UserDataTest.UserRole,
-      UserDataTest.Status,
-      UserDataTest.EmployeeName,
-      UserDataTest.UserName,
-      UserDataTest.Password,
-      UserDataTest.ConfirmPassword
+      UserTestData.UserRole,
+      UserTestData.Status,
+      UserTestData.EmployeeName,
+      UserTestData.UserName,
+      UserTestData.Password,
+      UserTestData.ConfirmPassword
     );
     cy.contains(ResultData.SaveSuccess()).should("be.visible");
   });
 
-  it.skip("Verify search user", () => {
-    UserPage.searchUser(UserDataTest.UserName);
+  it("Verify search user", () => {
+    UserPage.searchUser(UserTestData.UserName);
   });
 
   it("Verify that an existing user cannot be added", () => {
     // Add User page gets opened
     UserPage.addUser(
-      UserDataTest.UserRole,
-      UserDataTest.Status,
-      UserDataTest.EmployeeName,
-      UserDataTest.UserName,
-      UserDataTest.Password,
-      UserDataTest.ConfirmPassword
+      UserTestData.UserRole,
+      UserTestData.Status,
+      UserTestData.EmployeeName,
+      UserTestData.UserName,
+      UserTestData.Password,
+      UserTestData.ConfirmPassword
     );
     //A success message gets displayed
     cy.contains(ResultData.MessageExist()).should("be.visible");
   });
-  it.skip("Verify edit user successfully", () => {
-    UserPage.editUser(UserDataTest.UserName);
+  it("Verify edit user successfully", () => {
+    UserPage.editUser(UserTestData.UserName);
     cy.get("h6").should("contain", "Edit User");
   });
 
-  it.skip("Verify delete user successfully", () => {
-    UserPage.deleteUser(UserDataTest.UserName);
+  it("Verify delete user successfully", () => {
+    UserPage.deleteUser(UserTestData.UserName);
     cy.contains(ResultData.DeleteSuccess()).should("be.visible");
   });
 });

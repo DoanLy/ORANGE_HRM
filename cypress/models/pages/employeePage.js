@@ -41,6 +41,14 @@ class employeePage {
       ":nth-child(1) > .oxd-form > .oxd-form-actions > .oxd-button"
     ).click();
   }
+
+  deleteEmployee(EmployeeId) {
+    tableComponent.handleActionOnTableRow(
+      EmployeeId,
+      iconComponent.iconDeleteElem
+    );
+    buttonComponent.comfirmDialogDelete().click();
+  }
 }
 
 export default new employeePage();

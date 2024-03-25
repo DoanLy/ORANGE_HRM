@@ -1,11 +1,11 @@
 /// <reference types="cypress" />
-
+import HRMLoginPage from "../../models/pages/HRMLoginPage.js";
+import HomePage from "../../models/pages/HomePage.js";
 describe("Search Claim Function", () => {
   beforeEach(() => {
-    cy.login();
-    // Admin page gets opened
-    cy.get(".oxd-main-menu li").contains("Claim").click();
-    cy.url().should("include", "claim");
+    HRMLoginPage.login();
+    // Claim page gets opened
+    HomePage.clickMenuItem("Claim", "claim");
   });
 
   it("Verify date picker", () => {

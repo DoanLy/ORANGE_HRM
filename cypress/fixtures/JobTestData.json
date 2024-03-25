@@ -1,0 +1,18 @@
+{
+  "QC": {
+    "JobTitle": "QC",
+    "Description": "Nothing"
+  },
+  "DEV": {
+    "JobTitle": "DEV",
+    "Description": "Nothing"
+  },
+  "PM": {
+    "JobTitle": "PM",
+    "Description": "Nothing"
+  },
+  "QALead": {
+    "JobTitle": "QA Lead",
+    "Description": "Nothing"
+  }
+}

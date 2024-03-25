@@ -1,4 +1,3 @@
-import HomePage from "./HomePage.js";
 import iconComponent from "../components/iconComponent.js";
 import buttonComponent from "../components/buttonComponent.js";
 import tableComponent from "../components/tableComponent.js";
@@ -6,13 +5,13 @@ import topbarComponent from "../components/topbarComponent.js";
 
 const DROPDOWN_MENU_ITEM_SEL = ".oxd-dropdown-menu li";
 
-class AdminPage {
+class adminPage {
   DropdownMenuItemElem() {
     return cy.get(DROPDOWN_MENU_ITEM_SEL);
   }
 
   visitJobPage() {
-    topbarComponent.selectItemFromTopBar("Job");
+    topbarComponent.clickItemFromTopBar("Job");
   }
 
   visitJobTitlePage() {
@@ -60,4 +59,4 @@ class AdminPage {
   }
 }
 
-export default new AdminPage();
+export default new adminPage();
