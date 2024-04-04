@@ -1,4 +1,4 @@
-const TOPBAR_MENU_ITEM_SEL = ".oxd-topbar-body-nav ul";
+const TOPBAR_MENU_ITEM_SEL = ".oxd-topbar-body-nav ul li";
 
 class topbarComponent {
   getTopbarMenuItem() {
@@ -6,6 +6,9 @@ class topbarComponent {
   }
 
   clickItemFromTopBar(itemMenu) {
+    this.getTopbarMenuItem().contains(itemMenu).click();
+  }
+  visitTopBarItem(itemMenu) {
     this.getTopbarMenuItem().contains(itemMenu).click();
   }
 }

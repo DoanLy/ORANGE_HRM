@@ -31,14 +31,15 @@ class adminPage {
       ":nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-textarea"
     ).type(Description);
     //upload file
-    const fileName = "testcase_thamkhao.txt";
+    const fileName =
+      "D:/CODE/ORANGE-HRM/cypress/fixtures/testcase_thamkhao.txt";
     // cy.get(".oxd-file-input-div").click();
-    cy.get('input[type="file"]').attachFile({
-      filePath: fileName,
-      encoding: "utf-8",
+    cy.get(":nth-child(3) > .oxd-input-group").within(() => {
+      cy.get('input[type="file"]').selectFile(fileName, { force: true });
     });
 
     cy.wait(5000);
+
     buttonComponent.clickBtnSave();
   }
 

@@ -18,7 +18,7 @@ describe("Add Job Function", () => {
     adminPage.visitJobTitlePage();
   });
 
-  it("Verify add job successfully", () => {
+  it.only("Verify add job successfully", () => {
     //add job title
     adminPage.addJobTitle(jobData.DEV.JobTitle, jobData.DEV.Description);
     cy.contains(ResultData.SaveSuccess()).should("be.visible");
