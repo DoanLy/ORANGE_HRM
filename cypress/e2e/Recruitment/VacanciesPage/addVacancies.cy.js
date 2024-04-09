@@ -29,5 +29,6 @@ describe("Test Add vacancies Function", () => {
       vacancieData.JobTitle,
       vacancieData.VacancyName
     );
+    topbarComponent.clickItemFromTopBar("Vacancies");
   });
 });
