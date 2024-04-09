@@ -22,4 +22,12 @@ describe("Test Login Function", () => {
     );
     cy.get(".oxd-alert-content").should("contain", "Invalid credentials");
   });
+
+  it("Verify login with incorrect Credentials", () => {
+    LoginPage.login(
+      testData.incorrectCredentials.username,
+      testData.incorrectCredentials.password
+    );
+    cy.get(".oxd-alert-content").should("contain", "Invalid credentials");
+  });
 });

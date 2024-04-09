@@ -12,4 +12,8 @@ describe("Test Search Claim Function", () => {
   it("Verify date picker", () => {
     EmployeeClaimsPage.searchEmployeeClaims();
   });
+
+  it("Verify date picker", () => {
+    EmployeeClaimsPage.searchEmployeeClaims();
+  });
 });
