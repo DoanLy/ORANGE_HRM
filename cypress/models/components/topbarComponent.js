@@ -8,9 +8,6 @@ class topbarComponent {
   clickItemFromTopBar(itemMenu) {
     this.getTopbarMenuItem().contains(itemMenu).click();
   }
-  visitTopBarItem(itemMenu) {
-    this.getTopbarMenuItem().contains(itemMenu).click();
-  }
 }
 
 export default new topbarComponent();

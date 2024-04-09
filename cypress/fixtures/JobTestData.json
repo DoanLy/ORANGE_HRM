@@ -4,7 +4,7 @@
     "Description": "Nothing"
   },
   "DEV": {
-    "JobTitle": "DEV1",
+    "JobTitle": "DEV",
     "Description": "Nothing"
   },
   "PM": {
@@ -13,6 +13,10 @@
   },
   "QALead": {
     "JobTitle": "QA Lead",
+    "Description": "Nothing"
+  },
+  "AccountAssistant": {
+    "JobTitle": "Account Assistant",
     "Description": "Nothing"
   }
 }

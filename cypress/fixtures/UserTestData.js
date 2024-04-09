@@ -1,7 +1,5 @@
-import { randomNumber } from "../MathUtils/randomData";
-
 export const UserTestData = {
-  UserName: `Test${randomNumber}`,
+  UserName: `Test1234`,
   UserRole: "Admin",
   Status: "Enable",
   EmployeeName: "Virat Kohli",
