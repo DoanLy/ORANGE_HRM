@@ -15,11 +15,11 @@ describe("Test Login Function", () => {
     cy.get("h6").should("contain", "Dashboard");
   });
 
-  it.skip("Verify login with incorrect Credentials", () => {
+  it("Verify login with incorrect Credentials", () => {
     LoginPage.login(
       testData.incorrectCredentials.username,
       testData.incorrectCredentials.password
     );
-    cy.get(".oxd-alert-content").should("contain", "Invalidi credentials");
+    cy.get(".oxd-alert-content").should("contain", "Invalid credentials");
   });
 });
