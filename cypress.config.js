@@ -1,10 +1,21 @@
 const { defineConfig } = require("cypress");
+const moment = require("moment");
 
+function getCurrentDateTime() {
+  const currentDateTime = moment().format("DD-MM-YYYY_HHmmss");
+  return currentDateTime;
+}
 module.exports = defineConfig({
   projectId: "1i21yi",
   reporter: "cypress-mochawesome-reporter",
   reporterOptions: {
     overwrite: false,
+    charts: true, //biểu đồ
+    reportPageTitle: "Automation Report",
+    embeddedScreenshots: true,
+    inlineAssets: true,
+    saveAllAttempts: false,
+    reportFilename: `report-${getCurrentDateTime()}.html`,
   },
   video: true,
   e2e: {

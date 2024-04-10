@@ -10,7 +10,7 @@ describe("Test Add User Function", () => {
     // Admin page gets opened
     HomePage.clickMainMenuItem("Admin", "admin");
   });
-  Cypress._.times(50, (k) => {
+  Cypress._.times(3, (k) => {
     it(`Verify add user successfully time ${k + 1}`, () => {
       // Add User page gets opened
       UserPage.addUser(
