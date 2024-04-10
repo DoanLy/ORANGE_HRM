@@ -1,1 +1,1 @@
-export const randomNumber = Math.floor(Math.random() * 9000) + 1000;
+export const randomNumber = Math.floor(Math.random() * 90000) + 10000;

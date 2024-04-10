@@ -33,7 +33,7 @@ class UserPage {
 
     // Employee name field gets filled
     cy.get('input[placeholder="Type for hints..."]').type(EmployeeName);
-    cy.wait(3000);
+    cy.wait(5000);
     cy.contains(EmployeeName).click();
     // input username&password
     cy.get(
@@ -47,6 +47,7 @@ class UserPage {
     ).type(ConfirmPassword);
     //A success message gets displayed
     buttonComponent.clickBtnSave();
+    cy.wait(3000);
   }
 
   searchUser(UserName) {

@@ -2,7 +2,7 @@ export const UserTestData = {
   UserName: `Test1234`,
   UserRole: "Admin",
   Status: "Enable",
-  EmployeeName: "Virat Kohli",
+  EmployeeName: "Naina Thakur",
   Password: "Test123@QA$",
   ConfirmPassword: "Test123@QA$",
 };
