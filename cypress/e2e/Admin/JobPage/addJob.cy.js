@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import LoginPage from "../../../models/pages/Auth/LoginPage.js";
+
 import ResultData from "../../../models/components/ResultData.js";
 import HomePage from "../../../models/pages/HomePage.js";
 import jobPage from "../../../models/pages/Admin/JobPage.js";
