@@ -32,10 +32,10 @@ class jobPage {
       ":nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-textarea"
     ).type(Description);
     //upload file
-    const fileName = "../../../fixtures/testcase_thamkhao.txt";
-    // cy.get(".oxd-file-input-div").click();
+
+    cy.fixture("testcase_thamkhao.txt", null).as("myFixture");
     cy.get(":nth-child(3) > .oxd-input-group").within(() => {
-      cy.get('input[type="file"]').selectFile(fileName, { force: true });
+      cy.get('input[type="file"]').selectFile("@myFixture", { force: true });
     });
 
     cy.wait(5000);
