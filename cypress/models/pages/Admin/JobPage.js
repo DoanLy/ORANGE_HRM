@@ -2,7 +2,7 @@ import iconComponent from "../../components/iconComponent.js";
 import buttonComponent from "../../components/buttonComponent.js";
 import tableComponent from "../../components/tableComponent.js";
 import topbarComponent from "../../components/topbarComponent.js";
-import fileName from "../../../fixtures/testcase_thamkhao.txt";
+// import fileName from "../../../fixtures/testcase_thamkhao.txt";
 
 const DROPDOWN_MENU_ITEM_SEL = ".oxd-dropdown-menu li";
 
@@ -32,8 +32,7 @@ class jobPage {
       ":nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-textarea"
     ).type(Description);
     //upload file
-    // const fileName =
-    //   "../../cypress/fixtures/testcase_thamkhao.txt";
+    const fileName = "../../../fixtures/testcase_thamkhao.txt";
     // cy.get(".oxd-file-input-div").click();
     cy.get(":nth-child(3) > .oxd-input-group").within(() => {
       cy.get('input[type="file"]').selectFile(fileName, { force: true });
