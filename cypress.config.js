@@ -24,5 +24,9 @@ module.exports = defineConfig({
       require("cypress-mochawesome-reporter/plugin")(on);
     },
     baseUrl: "https://opensource-demo.orangehrmlive.com/web/index.php",
+    defaultCommandTimeout: 20000,
+    pageLoadTimeout: 200000,
+    requestTimeout: 10000,
+    responseTimeout: 50000,
   },
 });
