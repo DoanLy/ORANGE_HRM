@@ -65,7 +65,7 @@ This is my cypress project.
 
 ## Run the Automation Script:
 
-1. Open cmd to the project folder using VS Code'
+1. Open cmd to the project folder using VS Code
 2. Type this command:
    npm run test
 3. After Complete the test execution Report will generate to reports Folder
