@@ -17,7 +17,7 @@ describe("Test Add User Function", () => {
         UserTestData.Status,
         UserTestData.EmployeeName,
         `Test${randomNumber}${k + 1}`,
-        // UserTestData.UserName,
+        UserTestData.UserName,
         UserTestData.Password,
         UserTestData.ConfirmPassword
       );
