@@ -12,12 +12,12 @@ module.exports = defineConfig({
     overwrite: false,
     charts: true, //biểu đồ
     reportPageTitle: "Automation Report",
-    embeddedScreenshots: true,
+    embeddedScreenshots: false,
     inlineAssets: true,
     saveAllAttempts: false,
     reportFilename: `report-${getCurrentDateTime()}.html`,
   },
-  video: true,
+  video: false,
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
