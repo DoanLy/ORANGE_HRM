@@ -2,7 +2,7 @@
 import HomePage from "../../../models/pages/HomePage.js";
 import topbarComponent from "../../../models/components/topbarComponent.js";
 import CorporateBrandingPage from "../../../models/pages/Admin/CorporateBrandingPage.js";
-const urlfile = "D:/CODE/ORANGE-HRM/cypress/fixtures/treesthumbnail.png";
+const urlfile = "../ORANGE-HRM/cypress/fixtures/treesthumbnail.png";
 const filename = "treesthumbnail.png";
 describe("Test Upload Branding Logo and Banner Function", () => {
   beforeEach(() => {

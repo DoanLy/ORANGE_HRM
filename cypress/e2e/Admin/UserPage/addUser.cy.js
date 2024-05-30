@@ -4,7 +4,6 @@ import UserPage from "../../../models/pages/Admin/UserPage.js";
 import ResultData from "../../../models/components/ResultData.js";
 import { UserTestData } from "../../../fixtures/UserTestData.js";
 import HomePage from "../../../models/pages/HomePage.js";
-import { randomNumber } from "../../../MathUtils/randomData.js";
 describe("Test Add User Function", () => {
   beforeEach(() => {
     // Admin page gets opened
