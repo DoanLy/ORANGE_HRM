@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "debug": "cypress open",
-    "start": "cypress run --browser chrome",
-    "test": "cypress run --browser chrome --spec \"cypress/e2e/Auth/*\""
+    "test": "cypress run --browser chrome",
+    "start": "cypress run --browser chrome --spec \"cypress/e2e/Auth/*\""
   },
   "author": "lydtt",
   "license": "ISC",
