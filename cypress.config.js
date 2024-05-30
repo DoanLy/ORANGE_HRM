@@ -6,7 +6,7 @@ function getCurrentDateTime() {
   return currentDateTime;
 }
 module.exports = defineConfig({
-  projectId: "1i21yi",
+  projectId: "midtx3",
   reporter: "cypress-mochawesome-reporter",
   reporterOptions: {
     overwrite: false,
